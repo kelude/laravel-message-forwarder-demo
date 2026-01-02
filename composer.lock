@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43d59497f9f5c62f39830f31ff529950",
+    "content-hash": "ac559872dfb915feaad4ca9dacef507c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1228,17 +1228,17 @@
             "time": "2025-12-31T16:10:57+00:00"
         },
         {
-            "name": "kelude/laravel-message-forwarder",
+            "name": "kelude/laravel-forwarder",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kelude/laravel-message-forwarder.git",
-                "reference": "fae9cb082111dd306c0c94436b31998fab68d948"
+                "url": "https://github.com/kelude/laravel-forwarder.git",
+                "reference": "017191798ba2be6566ea8dd2a9a4636003408767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kelude/laravel-message-forwarder/zipball/fae9cb082111dd306c0c94436b31998fab68d948",
-                "reference": "fae9cb082111dd306c0c94436b31998fab68d948",
+                "url": "https://api.github.com/repos/kelude/laravel-forwarder/zipball/017191798ba2be6566ea8dd2a9a4636003408767",
+                "reference": "017191798ba2be6566ea8dd2a9a4636003408767",
                 "shasum": ""
             },
             "require": {
@@ -1262,30 +1262,32 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Kelude\\MessageForwarder\\MessageForwarderServiceProvider"
+                        "Kelude\\Forwarder\\ForwarderServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Kelude\\MessageForwarder\\": "src/"
+                    "Kelude\\Forwarder\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Laravel Message Forwarder.",
+            "description": "Laravel Forwarder.",
             "keywords": [
+                "calls forwarder",
                 "forwarder",
                 "laravel",
-                "message"
+                "messages forwarder",
+                "notifications forwarder"
             ],
             "support": {
-                "issues": "https://github.com/kelude/laravel-message-forwarder/issues",
-                "source": "https://github.com/kelude/laravel-message-forwarder/tree/main"
+                "issues": "https://github.com/kelude/laravel-forwarder/issues",
+                "source": "https://github.com/kelude/laravel-forwarder/tree/main"
             },
-            "time": "2026-01-02T17:34:05+00:00"
+            "time": "2026-01-02T19:34:38+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -9881,7 +9883,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kelude/laravel-message-forwarder": 20
+        "kelude/laravel-forwarder": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
