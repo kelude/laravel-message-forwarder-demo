@@ -6,7 +6,7 @@ return [
 
     'prefix' => env('MESSAGE_FORWARDER_PREFIX', 'message-forwarder'),
 
-    'middleware' => null,
+    'middleware' => ['auth:sanctum'],
 
     'webhook' => [
         'secret' => env('MESSAGE_FORWARDER_WEBHOOK_SECRET'),

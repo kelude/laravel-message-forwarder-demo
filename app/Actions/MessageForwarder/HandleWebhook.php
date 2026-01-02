@@ -2,8 +2,8 @@
 
 namespace App\Actions\MessageForwarder;
 
+use App\Models\ForwardedNotification;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Log;
 use Kelude\MessageForwarder\Contracts\HandlesWebhooks;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -17,9 +17,15 @@ class HandleWebhook implements HandlesWebhooks
      */
     public function handle(Request $request): Response
     {
-        // Log::info('Webhook Received', $request->all());
+        $validated = $request->validate([
+            'from' => ['required', 'string'],
+            'content' => ['required', 'string'],
+        ]);
 
-        // Your logic here...
+        ForwardedNotification::query()->create([
+            ...$validated,
+            'user_id' => $request->user()->id,
+        ]);
 
         return new Response('Webhook Handled', Response::HTTP_OK);
     }
